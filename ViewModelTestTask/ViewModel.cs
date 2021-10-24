@@ -210,7 +210,7 @@ namespace ViewModelTestTask
         }
         private async void SearchResponse()
         {
-            ResultSeachCode = await Model.SearchResponse(filePath, SeachCode);
+            ResultSeachCode = await Model.SearchResponse(filePath, SeachCode.ToUpper());
             if (ResultSeachCode == "")
             {
                 LabelSeachError = "Введите правильно числовой код валюты либо код страны";

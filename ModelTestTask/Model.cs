@@ -143,10 +143,10 @@ namespace ModelTestTask
                     rubcourse = PaymentCourseRUB(current.code.Value, current.code.Nominal);
                     usdcourse = PaymentCourseUSD(codeUsd.code.Value, codeUsd.code.Nominal, rubcourse);
                 }
-            }
-            if (rubcourse != 0 && usdcourse != 0)
-            {
-                resultSeachCode = "1 " + currencyCode + " = " + rubcourse.ToString() + " рублей и " + usdcourse.ToString() + " y.e";
+                if (rubcourse != 0 && usdcourse != 0)
+                {
+                    resultSeachCode = "1 " + current.code.CharCode + " = " + rubcourse.ToString() + " рублей и " + usdcourse.ToString() + " y.e";
+                }
             }
             return resultSeachCode;
         }
