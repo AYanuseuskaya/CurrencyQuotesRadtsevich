@@ -21,10 +21,6 @@ namespace ModelTestTask
         public Dictionary<string, Code> Valute { get; set; }
        
     }
-    public class Valute
-    {
-        public Dictionary<string, Code> items { get; set; }
-    }
     public class Code
     {
         public string ID { get; set; }
