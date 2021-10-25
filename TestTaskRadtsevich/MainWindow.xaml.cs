@@ -31,8 +31,15 @@ namespace TestTaskRadtsevich
         }
         void textBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
+            TextBox tb = sender as TextBox;
             if (!Char.IsDigit(e.Text, 0) && e.Text!=",")
-            { e.Handled = true; }
+            { 
+                e.Handled = true; 
+            }
+            else if (e.Text == "," && (tb.Text.IndexOf(",") != -1 || tb.Text == ""))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
